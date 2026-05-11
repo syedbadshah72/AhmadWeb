@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My First Website</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        text-align: center;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        max-width: 750px;
+    }
+
+    h1 {
+        font-size: 34px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        border: none;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .button:hover {
+        background: #333;
+    }
+
+    /* Hidden section */
+    .graphics-box {
+        margin-top: 20px;
+        padding: 20px;
+        background: #111;
+        color: white;
+        border-radius: 15px;
+        display: none; /* hidden by default */
+    }
+
+    .graphics-box h2 {
+        color: #00ffcc;
+    }
+
+    .footer {
+        margin-top: 20px;
+        font-size: 13px;
+        color: gray;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>I am Syed Ahmad Waqar</h1>
+
+    <p>
+        I am a student.<br>
+        I read in class Ninth.<br>
+        It is my first web.
+    </p>
+
+    <button class="button" onclick="toggleExplore()">Explore More</button>
+
+    <div class="graphics-box" id="graphicsBox">
+        <h2>GRAPHICS DESIGN SECTION</h2>
+        <p>
+            This is a creative UI/UX design section similar to modern studio websites like Rockstar-style landing pages.
+        </p>
+        <p>
+            ✔ Logo Design Ideas<br>
+            ✔ UI/UX Layout Concepts<br>
+            ✔ Portfolio Design Structure
+        </p>
+    </div>
+
+    <div class="footer">
+        English Note: This website is under development and more sections will be added soon. Project is currently pending.
+    </div>
+
+</div>
+
+<script>
+    function toggleExplore() {
+        var box = document.getElementById("graphicsBox");
+
+        if (box.style.display === "none" || box.style.display === "") {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
