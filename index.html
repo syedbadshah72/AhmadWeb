@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="dU9UhKOm7wiLLlntSLP9KEiEholR2GvGBL41kNFUXZs" />
 <meta charset="UTF-8">
 <title>My First Website</title>
 
@@ -114,6 +113,157 @@
         }
     }
 </script>
+<!-- PROFESSIONAL SHOWCASE SECTION -->
 
+<style>
+
+.showcase-section{
+    margin-top:50px;
+    display:none;
+    animation: fadeIn 1s ease;
+}
+
+.showcase-title{
+    font-size:32px;
+    margin-bottom:20px;
+    color:#111;
+}
+
+.showcase-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.showcase-card{
+    background:#111;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.showcase-card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.showcase-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.showcase-content{
+    padding:20px;
+    color:white;
+}
+
+.showcase-content h3{
+    margin:0;
+    color:#00ffcc;
+}
+
+.showcase-content p{
+    font-size:14px;
+    margin-top:10px;
+    color:#ddd;
+}
+
+.big-banner{
+    margin-top:40px;
+    background:linear-gradient(135deg,#111,#333);
+    padding:40px;
+    border-radius:25px;
+    color:white;
+}
+
+.big-banner h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.big-banner p{
+    font-size:18px;
+    color:#ccc;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+
+
+<div class="showcase-section" id="showcaseSection">
+
+    <h2 class="showcase-title">MY GRAPHICS & UI SHOWCASE</h2>
+
+    <div class="showcase-grid">
+
+        <div class="showcase-card">
+            <img src="https://picsum.photos/400/300?random=1">
+            <div class="showcase-content">
+                <h3>Modern UI Design</h3>
+                <p>Creative dark user interface inspired by gaming studio websites.</p>
+            </div>
+        </div>
+
+        <div class="showcase-card">
+            <img src="https://picsum.photos/400/300?random=2">
+            <div class="showcase-content">
+                <h3>Graphics Concept</h3>
+                <p>Professional visual concepts and creative design structures.</p>
+            </div>
+        </div>
+
+        <div class="showcase-card">
+            <img src="https://picsum.photos/400/300?random=3">
+            <div class="showcase-content">
+                <h3>Gaming Portfolio</h3>
+                <p>Rockstar-inspired modern layout for gaming and portfolio websites.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="big-banner">
+        <h2>WELCOME TO MY CREATIVE WORLD</h2>
+
+        <p>
+            I am learning web development, graphics designing and modern UI concepts.
+            This website is continuously improving with advanced features and animations.
+        </p>
+    </div>
+
+</div>
+
+
+<script>
+
+const oldFunction = toggleExplore;
+
+toggleExplore = function(){
+
+    oldFunction();
+
+    var showcase = document.getElementById("showcaseSection");
+
+    if(showcase.style.display === "none" || showcase.style.display === ""){
+        showcase.style.display = "block";
+    }
+    else{
+        showcase.style.display = "none";
+    }
+}
+
+</script>
 </body>
 </html>
